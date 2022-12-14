@@ -5,13 +5,13 @@ const gmail = document.querySelector(".gmail");
 const youtube = document.querySelector(".youtube");
 
 const paints = [
-  "first.jpg",
-  "second.jpg",
-  "third.jpg",
-  "four.jpg",
-  "five.jpg",
-  "seven.jpg",
-  "eight.jpg",
+  "firsst.jpg",
+  // "second.jpg",
+  // "third.jpg",
+  // "four.jpg",
+  // "five.jpg",
+  // "seven.jpg",
+  // "eight.jpg",
 ];
 
 function getPaint() {
