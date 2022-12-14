@@ -4,6 +4,7 @@
   --main--text: #fffffe;
   --seconday--text: #94a1b2q;
   --highlight--color: #7f5af0;
+  --tertiary--color: #20523d;
   --main--font: "Mountains of Christmas", cursive;
 }
 
@@ -29,6 +30,10 @@ body input[type=text] {
   font-weight: bolder;
   color: var(--background--color);
 }
+body a {
+  text-decoration: none;
+  color: var(--highlight--color);
+}
 body main {
   width: 100%;
   max-width: 1000px;
@@ -53,24 +58,35 @@ body main .general__logo {
 body main .general__logo .logo {
   height: 100%;
   width: 100%;
-  mask-image: url("./assets/svg/jack.svg");
-  -webkit-mask-image: url("./assets/svg/jack.svg");
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
+  border-radius: 5px;
+  max-width: 130px;
 }
-body main .general__time {
+body main .general__logo .logo:hover {
+  cursor: pointer;
+}
+body main .general__hour {
   color: var(--main--text);
   min-width: 220px;
   font-size: 4em;
   display: flex;
 }
-body main .general__time > div:nth-child(1)::after,
-body main .general__time > div:nth-child(2)::after {
+body main .general__hour > div:nth-child(1)::after,
+body main .general__hour > div:nth-child(2)::after {
   content: ":";
+  position: relative;
+  right: 5px;
+}
+body main .general__date {
+  display: flex;
+  justify-content: center;
+  color: var(--main--text);
+  min-width: 70px;
+  font-size: 1.5em;
+  width: 100%;
+}
+body main .general__date > div:nth-child(1)::after,
+body main .general__date > div:nth-child(2)::after {
+  content: "/";
   position: relative;
   right: 5px;
 }
@@ -102,7 +118,7 @@ body main .search form input::placeholder {
   text-align: center;
 }
 body main .search form input:focus {
-  box-shadow: rgba(104, 10, 141, 0.4) 0px 0px 0px 2px, rgba(61, 7, 122, 0.65) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
+  box-shadow: var(--tertiary--color) 0px 0px 0px 2px, rgba(73, 206, 150, 0.5607843137) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
 }
@@ -123,27 +139,16 @@ body main .links ul li {
   transition: ease-in-out 0.4s;
 }
 body main .links ul li img {
-  max-width: 90px;
   height: 100%;
-  background-color: var(--main--text);
-}
-body main .links ul li a {
-  text-decoration: none;
-  color: var(--highlight--color);
-  font-weight: bold;
+  width: 100%;
+  width: 50px;
+  filter: invert(41%) sepia(80%) saturate(3733%) hue-rotate(236deg) brightness(97%) contrast(93%);
 }
 body main .links ul li:hover {
   cursor: pointer;
-  box-shadow: rgba(104, 10, 141, 0.4) 0px 0px 0px 2px, rgba(61, 7, 122, 0.65) 0px 4px 6px -1px, rgba(140, 13, 224, 0.08) 0px 1px 0px inset;
+  box-shadow: var(--tertiary--color) 0px 0px 0px 2px, rgba(32, 85, 63, 0.5607843137) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
-}
-@media (hover: none) {
-  body .links ul li:hover {
-    cursor: default;
-    box-shadow: none;
-    transform: translateY(0);
-  }
 }
 
 h1,
@@ -153,52 +158,4 @@ h4,
 h5,
 h6 {
   color: var(--main--text);
-}
-
-.github,
-.youtube,
-.reddit,
-.telegram,
-.gmail {
-  height: 100%;
-  max-width: 100%;
-  width: 50px;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-}
-
-.github {
-  mask-image: url("./assets/svg/icons/github.svg");
-  -webkit-mask-image: url("./assets/svg/icons/github.svg");
-}
-
-.youtube {
-  mask-image: url("./assets/svg/icons/youtube.svg");
-  -webkit-mask-image: url("./assets/svg/icons/youtube.svg");
-}
-
-.reddit {
-  mask-image: url("./assets/svg/icons/reddit.svg");
-  -webkit-mask-image: url("./assets/svg/icons/reddit.svg");
-}
-
-.telegram {
-  mask-image: url("./assets/svg/icons/telegram.svg");
-  -webkit-mask-image: url("./assets/svg/icons/telegram.svg");
-}
-
-.gmail {
-  mask-image: url("./assets/svg/icons/gmail.svg");
-  -webkit-mask-image: url("./assets/svg/icons/gmail.svg");
-}
-
-.bongo {
-  width: 100%;
-  max-width: 100px;
-  border-radius: 5px;
-  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
