@@ -1,3 +1,5 @@
+@import url("./styles/snow.scss");
+
 :root {
   --background--color: hsl(280, 6%, 10%);
 
@@ -46,15 +48,17 @@ body {
       gap: 6em;
 
       &__logo {
+        max-width: 200px;
+        min-width: 100px;
+
         height: 200px;
-        width: 200px;
 
         img {
           height: 100%;
           width: 100%;
 
-          mask-image: url("./assets/svg/svg-6.svg");
-          -webkit-mask-image: url("./assets/svg/svg-6.svg");
+          mask-image: url("./assets/svg/christmas.svg");
+          -webkit-mask-image: url("./assets/svg/christmas.svg");
           mask-size: contain;
           -webkit-mask-size: contain;
           mask-repeat: no-repeat;
@@ -64,22 +68,34 @@ body {
         }
       }
 
-      &__info {
+      &__time {
         color: var(--main--text);
 
         font-weight: bold;
         font-size: 3em;
+
+        display: flex;
+        > div:nth-child(1)::after,
+        > div:nth-child(2)::after {
+          content: ":";
+          position: relative;
+          right: 5px;
+        }
       }
     }
 
-    .searchbar {
+    .search {
       padding: 1em;
 
-      & input {
-        max-width: 100%;
-        width: 300px;
+      max-width: 100%;
+      position: relative;
+      left: 10px;
 
-        display: block;
+      & input {
+        min-width: 500px;
+        resize: horizontal;
+
+        // display: block;
 
         padding: 1em;
 
@@ -103,15 +119,15 @@ body {
         list-style: none;
 
         li {
-          // border: 2px solid var(--highlight--color);
-          // border-radius: 5px;
+          max-width: 80px;
 
-          min-width: 80px;
-
-          // padding: 2em 1em;
           padding: 1em 0em;
 
           text-align: center;
+
+          border-radius: 0.5em;
+
+          transition: ease-in-out 0.4s;
 
           img {
             max-width: 90px;
@@ -130,6 +146,12 @@ body {
 
           &:hover {
             cursor: pointer;
+
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+              rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+            transform: translateY(-5px);
+            transition: ease-in-out 0.4s;
           }
         }
       }

@@ -1,3 +1,4 @@
+@import url("./styles/snow.scss");
 :root {
   --background--color: hsl(280, 6%, 10%);
   --main--text: #fffffe;
@@ -36,14 +37,15 @@ body main .general {
   gap: 6em;
 }
 body main .general__logo {
+  max-width: 200px;
+  min-width: 100px;
   height: 200px;
-  width: 200px;
 }
 body main .general__logo img {
   height: 100%;
   width: 100%;
-  mask-image: url("./assets/svg/svg-6.svg");
-  -webkit-mask-image: url("./assets/svg/svg-6.svg");
+  mask-image: url("./assets/svg/christmas.svg");
+  -webkit-mask-image: url("./assets/svg/christmas.svg");
   mask-size: contain;
   -webkit-mask-size: contain;
   mask-repeat: no-repeat;
@@ -51,30 +53,39 @@ body main .general__logo img {
   mask-position: center;
   -webkit-mask-position: center;
 }
-body main .general__info {
+body main .general__time {
   color: var(--main--text);
   font-weight: bold;
   font-size: 3em;
+  display: flex;
 }
-body main .searchbar {
+body main .general__time > div:nth-child(1)::after,
+body main .general__time > div:nth-child(2)::after {
+  content: ":";
+  position: relative;
+  right: 5px;
+}
+body main .search {
   padding: 1em;
-}
-body main .searchbar input {
   max-width: 100%;
-  width: 300px;
-  display: block;
+  position: relative;
+  left: 10px;
+}
+body main .search input {
+  min-width: 500px;
+  resize: horizontal;
   padding: 1em;
   border: none;
   border-radius: 0.5em;
   outline: none;
 }
-body main .searchbar input::-moz-placeholder {
+body main .search input::-moz-placeholder {
   text-align: center;
 }
-body main .searchbar input:-ms-input-placeholder {
+body main .search input:-ms-input-placeholder {
   text-align: center;
 }
-body main .searchbar input::placeholder {
+body main .search input::placeholder {
   text-align: center;
 }
 body main .links ul {
@@ -84,9 +95,11 @@ body main .links ul {
   list-style: none;
 }
 body main .links ul li {
-  min-width: 80px;
+  max-width: 80px;
   padding: 1em 0em;
   text-align: center;
+  border-radius: 0.5em;
+  transition: ease-in-out 0.4s;
 }
 body main .links ul li img {
   max-width: 90px;
@@ -100,6 +113,9 @@ body main .links ul li a {
 }
 body main .links ul li:hover {
   cursor: pointer;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transform: translateY(-5px);
+  transition: ease-in-out 0.4s;
 }
 
 h1,

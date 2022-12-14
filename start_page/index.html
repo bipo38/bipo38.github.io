@@ -1,54 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./js/time.js" defer></script>
-    <script src="./js/paints.js" defer></script>
-  </head>
-  <body>
-    <main>
-      <div class="general">
-        <div class="general__logo">
-          <img src="./assets/img/night.jpg" alt="logo" />
-        </div>
-        <div class="general__info">
-          <p class="time"></p>
-        </div>
-      </div>
 
-      <div class="links">
-        <ul>
-          <li>
-            <a href="https://web.telegram.org">
-              <img class="telegram" src="./assets/img/wave.jpg" alt="logo"
-            /></a>
-          </li>
-          <li>
-            <a href="https://youtube.com">
-              <img class="youtube" src="./assets/img/logo.avif" alt="logo"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com">
-              <img class="github" src="./assets/img/logo.avif" alt="logo"
-            /></a>
-          </li>
-          <li>
-            <a href="https://stackoverflow.com">
-              <img class="stack" src="./assets/img/logo.avif" alt="logo"
-            /></a>
-          </li>
-          <li>
-            <a href="https://reddit.com">
-              <img class="reddit" src="./assets/img/logo.avif" alt="logo"
-            /></a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Page</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./styles/snow.css">
+  <script src="./js/time.js" defer></script>
+  <script src="./js/paints.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="general">
+      <div class="general__logo">
+        <img onclick="toggleSnow()" src="./assets/img/night.jpg" alt="logo" />
+
       </div>
-    </main>
-  </body>
+      <div class="general__time">
+        <div class="hour"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+      </div>
+    </div>
+
+
+    <div class="search">
+      <form action="https://google.com/search" method="get">
+        <input class="search" title="searchbar" type="text" name="q" placeholder="Search" autocomplete="off"
+          autofocus />
+      </form>
+    </div>
+
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="https://web.telegram.org">
+            <img class="telegram" src="./assets/img/wave.jpg" alt="logo" /></a>
+        </li>
+        <li>
+          <a href="https://youtube.com">
+            <img class="youtube" src="./assets/img/logo.avif" alt="logo" /></a>
+        </li>
+        <li>
+          <a href="https://github.com">
+            <img class="github" src="./assets/img/logo.avif" alt="logo" /></a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com">
+            <img class="stack" src="./assets/img/logo.avif" alt="logo" /></a>
+        </li>
+        <li>
+          <a href="https://reddit.com">
+            <img class="reddit" src="./assets/img/logo.avif" alt="logo" /></a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❄
+    </div>
+  </div>
+</body>
+
 </html>

@@ -1,9 +1,9 @@
-const github = document.querySelector(".github");
-const telegram = document.querySelector(".telegram");
-const youtube = document.querySelector(".reddit");
-const stack = document.querySelector(".stack");
+const github = document.querySelector('.github');
+const telegram = document.querySelector('.telegram');
+const youtube = document.querySelector('.reddit');
+const stack = document.querySelector('.stack');
 
-const paints = ["night.jpg", "logo.avif"];
+const paints = ['night.jpg', 'logo.avif'];
 
 function getPaint() {
   return Math.floor(Math.random() * paints.length);
@@ -22,3 +22,4 @@ function init() {
 }
 
 init();
+
