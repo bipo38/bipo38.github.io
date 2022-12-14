@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/snow.css" />
+    <script src="./js/time.js" defer></script>
+    <script src="./js/paints.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start Page</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./styles/snow.css">
-  <script src="./js/time.js" defer></script>
-  <script src="./js/paints.js" defer></script>
-</head>
-
-<body>
-  <main>
-    <div class="general">
-      <div class="general__logo">
-        <img onclick="toggleSnow()" src="./assets/img/night.jpg" alt="logo" />
-
+  <body>
+    <main>
+      <div class="general">
+        <div class="general__logo">
+          <img
+            onclick="toggleSnow()"
+            class="bongo"
+            src="./assets/img/bongo.gif"
+            alt="Bongo Cat"
+          />
+        </div>
+        <div class="general__time">
+          <div class="hour"></div>
+          <div class="minutes"></div>
+          <div class="seconds"></div>
+        </div>
       </div>
-      <div class="general__time">
-        <div class="hour"></div>
-        <div class="minutes"></div>
-        <div class="seconds"></div>
+
+      <div class="search">
+        <form action="https://google.com/search" method="get">
+          <input
+            class="search"
+            title="searchbar"
+            type="text"
+            name="q"
+            placeholder="Search"
+            autocomplete="off"
+            autofocus
+          />
+        </form>
       </div>
-    </div>
 
+      <div class="links">
+        <ul>
+          <li>
+            <a href="https://web.telegram.org">
+              <img
+                width="80"
+                height="80"
+                class="telegram"
+                src="./assets/img/logo.avif"
+                alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://youtube.com">
+              <img
+                width="80"
+                height="80"
+                class="youtube"
+                src="./assets/img/logo.avif"
+                alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com">
+              <img
+                width="80"
+                height="80"
+                class="github"
+                src="./assets/img/logo.avif"
+                alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://gmail.com">
+              <img
+                width="80"
+                height="80"
+                class="gmail"
+                src="./assets/img/logo.avif"
+                alt="logo"
+            /></a>
+          </li>
+          <li>
+            <a href="https://reddit.com">
+              <img
+                width="80"
+                height="80"
+                class="reddit"
+                src="./assets/img/logo.avif"
+                alt="logo"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
 
-    <div class="search">
-      <form action="https://google.com/search" method="get">
-        <input class="search" title="searchbar" type="text" name="q" placeholder="Search" autocomplete="off"
-          autofocus />
-      </form>
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❄</div>
     </div>
-
-
-    <div class="links">
-      <ul>
-        <li>
-          <a href="https://web.telegram.org">
-            <img class="telegram" src="./assets/img/logo.avif" alt="logo" /></a>
-        </li>
-        <li>
-          <a href="https://youtube.com">
-            <img class="youtube" src="./assets/img/logo.avif" alt="logo" /></a>
-        </li>
-        <li>
-          <a href="https://github.com">
-            <img class="github" src="./assets/img/logo.avif" alt="logo" /></a>
-        </li>
-        <li>
-          <a href="https://stackoverflow.com">
-            <img class="stack" src="./assets/img/logo.avif" alt="logo" /></a>
-        </li>
-        <li>
-          <a href="https://reddit.com">
-            <img class="reddit" src="./assets/img/logo.avif" alt="logo" /></a>
-        </li>
-      </ul>
-    </div>
-  </main>
-
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      ❅
-    </div>
-    <div class="snowflake">
-      ❅
-    </div>
-    <div class="snowflake">
-      ❆
-    </div>
-    <div class="snowflake">
-      ❄
-    </div>
-    <div class="snowflake">
-      ❅
-    </div>
-    <div class="snowflake">
-      ❆
-    </div>
-    <div class="snowflake">
-      ❄
-    </div>
-    <div class="snowflake">
-      ❅
-    </div>
-    <div class="snowflake">
-      ❆
-    </div>
-    <div class="snowflake">
-      ❄
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

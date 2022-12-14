@@ -1,12 +1,12 @@
-const hours = document.querySelector('.hour');
-const min = document.querySelector('.minutes');
-const sec = document.querySelector('.seconds');
+const hours = document.querySelector(".hour");
+const min = document.querySelector(".minutes");
+const sec = document.querySelector(".seconds");
 
 function getTime() {
   const date = new Date();
-  const hour = date.getHours().toString().padStart(2, '0');
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const seconds = date.getSeconds().toString().padStart(2, '0');
+  const hour = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const seconds = date.getSeconds().toString().padStart(2, "0");
   hours.innerText = `${hour} `;
   min.innerText = `${minutes} `;
   sec.innerText = `${seconds} `;
@@ -20,12 +20,11 @@ function init() {
 init();
 
 //Autofocus for firefox
-$('.search').focus();
+$(".search").focus();
 
-//
-
+//Snow
 function toggleSnow() {
-  const snow = document.querySelector('.snowflakes');
+  const snow = document.querySelector(".snowflakes");
 
-  snow.classList.toggle('not-snow');
+  snow.classList.toggle("not-snow");
 }

@@ -4,11 +4,12 @@
   --main--text: #fffffe;
   --seconday--text: #94a1b2q;
   --highlight--color: #7f5af0;
-  font-family: "Mountains of Christmas", cursive;
+  --main--font: "Mountains of Christmas", cursive;
 }
 
 body {
   background-color: var(--background--color);
+  font-family: var(--main--font);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -49,7 +50,7 @@ body main .general {
 body main .general__logo {
   max-width: 200px;
 }
-body main .general__logo img {
+body main .general__logo .logo {
   height: 100%;
   width: 100%;
   mask-image: url("./assets/svg/jack.svg");
@@ -76,29 +77,31 @@ body main .general__time > div:nth-child(2)::after {
 body main .search {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
 }
-body main .search input {
+body main .search form {
   width: 100%;
-  min-width: 360px;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+body main .search form input {
   padding: 1em;
+  max-width: 380px;
   border: none;
   border-radius: 0.5em;
   outline: none;
   transition: ease-in-out 0.4s;
 }
-body main .search input::-moz-placeholder {
+body main .search form input::-moz-placeholder {
   text-align: center;
 }
-body main .search input:-ms-input-placeholder {
+body main .search form input:-ms-input-placeholder {
   text-align: center;
 }
-body main .search input::placeholder {
+body main .search form input::placeholder {
   text-align: center;
 }
-body main .search input:focus {
+body main .search form input:focus {
   box-shadow: rgba(104, 10, 141, 0.4) 0px 0px 0px 2px, rgba(61, 7, 122, 0.65) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
@@ -114,7 +117,7 @@ body main .links ul {
 }
 body main .links ul li {
   max-width: 80px;
-  padding: 1em 0em;
+  padding: 1em;
   text-align: center;
   border-radius: 0.5em;
   transition: ease-in-out 0.4s;
@@ -131,9 +134,16 @@ body main .links ul li a {
 }
 body main .links ul li:hover {
   cursor: pointer;
-  box-shadow: rgba(104, 10, 141, 0.4) 0px 0px 0px 2px, rgba(61, 7, 122, 0.65) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(104, 10, 141, 0.4) 0px 0px 0px 2px, rgba(61, 7, 122, 0.65) 0px 4px 6px -1px, rgba(140, 13, 224, 0.08) 0px 1px 0px inset;
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
+}
+@media (hover: none) {
+  body .links ul li:hover {
+    cursor: default;
+    box-shadow: none;
+    transform: translateY(0);
+  }
 }
 
 h1,
@@ -149,9 +159,10 @@ h6 {
 .youtube,
 .reddit,
 .telegram,
-.stack {
+.gmail {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+  width: 50px;
   mask-size: contain;
   -webkit-mask-size: contain;
   mask-repeat: no-repeat;
@@ -180,7 +191,14 @@ h6 {
   -webkit-mask-image: url("./assets/svg/icons/telegram.svg");
 }
 
-.stack {
-  mask-image: url("./assets/svg/icons/stackoverflow.svg");
-  -webkit-mask-image: url("./assets/svg/icons/stackoverflow.svg");
+.gmail {
+  mask-image: url("./assets/svg/icons/gmail.svg");
+  -webkit-mask-image: url("./assets/svg/icons/gmail.svg");
+}
+
+.bongo {
+  width: 100%;
+  max-width: 100px;
+  border-radius: 5px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
