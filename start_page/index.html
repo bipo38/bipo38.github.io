@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Start Page" />
-    <link rel="icon" href="./assets/favicon.ico" />
-    <title>Start Page</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./styles/snow.css" />
-    <script src="./js/time.js" defer></script>
-  </head>
 
-  <body>
-    <main>
-      <div class="general">
-        <div class="general__logo">
-          <img
-            onclick="toggleSnow()"
-            class="logo"
-            src="./assets/img/bongo.gif"
-            alt="Bongo Cat"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start Page" />
+  <link rel="icon" href="./assets/favicon.ico" />
+  <title>Start Page</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preload" as="style" href="./styles/snow.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <script src=" ./js/time.js" defer>
+  </script>
+</head>
+
+<body>
+  <main>
+    <div class="general">
+      <div class="general__logo">
+        <img onclick="toggleSnow()" class="logo" src="./assets/img/bongost.gif" alt="Bongo Cat"  />
+      </div>
+      <div class="time">
+        <div class="general__hour">
+          <div class="hour"></div>
+          <div class="minutes"></div>
+          <div class="seconds"></div>
         </div>
-        <div class="time">
-          <div class="general__hour">
-            <div class="hour"></div>
-            <div class="minutes"></div>
-            <div class="seconds"></div>
-          </div>
-          <div class="general__date">
-            <div class="day"></div>
-            <div class="month"></div>
-            <div class="year"></div>
-          </div>
+        <div class="general__date">
+          <div class="day"></div>
+          <div class="month"></div>
+          <div class="year"></div>
         </div>
       </div>
-
-      <div class="search">
-        <form action="https://google.com/search" method="get">
-          <input
-            class="search"
-            title="searchbar"
-            type="text"
-            name="q"
-            placeholder="Search"
-            autocomplete="off"
-            autofocus
-          />
-        </form>
-        <div class="sound">
-          <button onclick="toggleAudio()" class="play" title="play/stop music">
-            <img src="./assets/svg/icons/disc.svg" alt="music" />
-          </button>
-          <audio class="audio" src="./assets/song.mp3"></audio>
-        </div>
-      </div>
-
-      <div class="links">
-        <ul>
-          <li>
-            <a href="https://web.telegram.org">
-              <img src="./assets/svg/icons/telegram.svg" alt="logo" />
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com">
-              <img src="./assets/svg/icons/youtube.svg" alt="logo" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com">
-              <img src="./assets/svg/icons/github.svg" alt=" logo" />
-            </a>
-          </li>
-          <li>
-            <a href="https://gmail.com">
-              <img src="./assets/svg/icons/gmail.svg" alt=" logo" />
-            </a>
-          </li>
-          <li>
-            <a href="https://reddit.com">
-              <img src="./assets/svg/icons/reddit.svg" alt=" logo" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </main>
-
-    <div class="not-snow" aria-hidden="true">
-      <div class="snowflake">❅</div>
-      <div class="snowflake">❅</div>
-      <div class="snowflake">❆</div>
-      <div class="snowflake">❄</div>
-      <div class="snowflake">❅</div>
-      <div class="snowflake">❆</div>
-      <div class="snowflake">❄</div>
-      <div class="snowflake">❅</div>
-      <div class="snowflake">❆</div>
-      <div class="snowflake">❄</div>
     </div>
-  </body>
+
+    <div class="search">
+      <form action="https://google.com/search" method="get">
+        <input class="search" title="searchbar" type="text" name="q" placeholder="Search" autocomplete="off"
+          autofocus />
+      </form>
+      <div class="sound">
+        <button onclick="toggleAudio()" class="play" title="play/stop music">
+          <img src="./assets/svg/icons/disc.svg" alt="music" />
+        </button>
+        <audio class="audio" src="./assets/song.mp3"></audio>
+      </div>
+    </div>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="https://web.telegram.org">
+            <img src="./assets/svg/icons/telegram.svg" alt="logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com">
+            <img src="./assets/svg/icons/youtube.svg" alt="logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com">
+            <img src="./assets/svg/icons/github.svg" alt=" logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://gmail.com">
+            <img src="./assets/svg/icons/gmail.svg" alt=" logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://reddit.com">
+            <img src="./assets/svg/icons/reddit.svg" alt=" logo" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="not-snow" aria-hidden="true">
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❄</div>
+  </div>
+</body>
+
 </html>

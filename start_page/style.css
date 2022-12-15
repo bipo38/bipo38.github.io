@@ -3,8 +3,8 @@
   --background--color: hsl(280, 6%, 10%);
   --main--text: #fffffe;
   --seconday--text: #94a1b2q;
-  --highlight--color: #7f5af0;
-  --tertiary--color: #20523d;
+  --highlight--color: #907fc1;
+  --tertiary--color: #3b9871;
   --main--font: "Mountains of Christmas", cursive;
 }
 
@@ -58,6 +58,7 @@ body main .general {
 }
 body main .general__logo {
   max-width: 200px;
+  padding-left: 0.2em;
 }
 body main .general__logo .logo {
   height: 100%;
@@ -147,7 +148,6 @@ body main .search .sound button img {
 }
 body main .search .sound button:hover {
   cursor: pointer;
-  box-shadow: var(--tertiary--color) 0px 0px 0px 2px, rgba(32, 85, 63, 0.5607843137) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
 }
 body main .links {
   width: 100%;
