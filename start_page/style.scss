@@ -173,6 +173,8 @@ body {
       }
 
       .sound {
+        background-color: transparent;
+
         & button {
           padding: 0.8em;
           border-radius: 50%;
@@ -180,7 +182,7 @@ body {
           outline: none;
           border: none;
 
-          background-color: var(--background--color);
+          background-color: transparent;
 
           min-width: 42px;
           min-height: 42px;

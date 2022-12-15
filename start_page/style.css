@@ -133,12 +133,15 @@ body main .search form input:focus {
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
 }
+body main .search .sound {
+  background-color: transparent;
+}
 body main .search .sound button {
   padding: 0.8em;
   border-radius: 50%;
   outline: none;
   border: none;
-  background-color: var(--background--color);
+  background-color: transparent;
   min-width: 42px;
   min-height: 42px;
 }
