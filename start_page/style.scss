@@ -49,10 +49,16 @@ body {
     color: var(--highlight--color);
   }
 
+  .snowflake {
+    z-index: 0;
+  }
+
   & main {
     width: 100%;
     max-width: 1000px;
     min-height: 100vh;
+
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -124,8 +130,15 @@ body {
     .search {
       width: 100%;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      flex-wrap: wrap;
 
       & form {
+        min-width: 0;
+        max-width: 380px;
+
         width: 100%;
 
         display: flex;
@@ -148,13 +161,45 @@ body {
           }
 
           &:focus {
-            box-shadow: var(--tertiary--color) 0px 0px 0px 2px, #49ce968f 0px 4px 6px -1px,
+            box-shadow: var(--tertiary--color) 0px 0px 0px 2px,
+              #49ce968f 0px 4px 6px -1px,
               rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
 
             transform: translateY(-5px);
             transition: ease-in-out 0.4s;
           }
           transition: ease-in-out 0.4s;
+        }
+      }
+
+      .sound {
+        & button {
+          padding: 0.8em;
+          border-radius: 50%;
+
+          outline: none;
+          border: none;
+
+          // border: 1px solid var(--tertiary--color);
+
+          background-color: var(--background--color);
+
+          min-width: 42px;
+          min-height: 42px;
+
+          & img {
+            width: 25px;
+
+            filter: invert(41%) sepia(80%) saturate(3733%) hue-rotate(236deg)
+              brightness(97%) contrast(93%);
+          }
+          &:hover {
+            cursor: pointer;
+
+            box-shadow: var(--tertiary--color) 0px 0px 0px 2px,
+              #20553f8f 0px 4px 6px -1px,
+              rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
+          }
         }
       }
     }
@@ -185,13 +230,15 @@ body {
 
             width: 50px;
 
-            filter: invert(41%) sepia(80%) saturate(3733%) hue-rotate(236deg) brightness(97%) contrast(93%);
+            filter: invert(41%) sepia(80%) saturate(3733%) hue-rotate(236deg)
+              brightness(97%) contrast(93%);
           }
 
           &:hover {
             cursor: pointer;
 
-            box-shadow: var(--tertiary--color) 0px 0px 0px 2px, #20553f8f 0px 4px 6px -1px,
+            box-shadow: var(--tertiary--color) 0px 0px 0px 2px,
+              #20553f8f 0px 4px 6px -1px,
               rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
 
             transform: translateY(-5px);
@@ -210,4 +257,17 @@ h4,
 h5,
 h6 {
   color: var(--main--text);
+}
+
+.rotate {
+  animation: rotate 0.5s linear infinite;
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }

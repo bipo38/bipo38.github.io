@@ -34,10 +34,14 @@ body a {
   text-decoration: none;
   color: var(--highlight--color);
 }
+body .snowflake {
+  z-index: 0;
+}
 body main {
   width: 100%;
   max-width: 1000px;
   min-height: 100vh;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,8 +97,14 @@ body main .general__date > div:nth-child(2)::after {
 body main .search {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 body main .search form {
+  min-width: 0;
+  max-width: 380px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -121,6 +131,23 @@ body main .search form input:focus {
   box-shadow: var(--tertiary--color) 0px 0px 0px 2px, rgba(73, 206, 150, 0.5607843137) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
   transform: translateY(-5px);
   transition: ease-in-out 0.4s;
+}
+body main .search .sound button {
+  padding: 0.8em;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: var(--background--color);
+  min-width: 42px;
+  min-height: 42px;
+}
+body main .search .sound button img {
+  width: 25px;
+  filter: invert(41%) sepia(80%) saturate(3733%) hue-rotate(236deg) brightness(97%) contrast(93%);
+}
+body main .search .sound button:hover {
+  cursor: pointer;
+  box-shadow: var(--tertiary--color) 0px 0px 0px 2px, rgba(32, 85, 63, 0.5607843137) 0px 4px 6px -1px, rgba(90, 17, 139, 0.08) 0px 1px 0px inset;
 }
 body main .links {
   width: 100%;
@@ -158,4 +185,25 @@ h4,
 h5,
 h6 {
   color: var(--main--text);
+}
+
+.rotate {
+  -webkit-animation: rotate 0.5s linear infinite;
+          animation: rotate 0.5s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
